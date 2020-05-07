@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import React from 'react';
 
 const Navbar = () => {
@@ -6,14 +7,14 @@ const Navbar = () => {
 			<div className="navbar-brand">GitHub Search</div>
 			<ul className="navbar-nav">
 				<li className="nav-item">
-					<a href="/" className="nav-link">
+					<NavLink exact to="/" className="nav-link">
 						Home
-					</a>
+					</NavLink>
 				</li>
 				<li className="nav-item">
-					<a href="/about" className="nav-link">
+					<NavLink to="/about" className="nav-link">
 						Info
-					</a>
+					</NavLink>
 				</li>
 			</ul>
 		</nav>
