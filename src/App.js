@@ -1,11 +1,16 @@
+import { Home } from './pages';
+import { Navbar } from './components';
 import React from 'react';
 
 function App() {
-  return (
-    <div className="container pt-4">
-      <h1>Hello React</h1>
-    </div>
-  );
+	return (
+		<React.Fragment>
+			<Navbar />
+			<div className="container pt-4">
+				<Home />
+			</div>
+		</React.Fragment>
+	);
 }
 
 export default App;
