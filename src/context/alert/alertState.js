@@ -13,7 +13,11 @@ const AlertState = ({ children }) => {
 		dispatch({ type: SHOW_ALERT, payload: { type, text } });
 	};
 
-	return <AlertContext.Provider value={{ hide, show, alert: state }}>{children}</AlertContext.Provider>;
+	return (
+		<AlertContext.Provider value={{ hide, show, alert: state }}>
+			{children}
+		</AlertContext.Provider>
+	);
 };
 
 export default AlertState;
