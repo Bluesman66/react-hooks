@@ -1,4 +1,4 @@
-import { Card, Search } from '../components';
+import { Alert, Card, Search } from '../components';
 
 import React from 'react';
 
@@ -7,11 +7,12 @@ const Home = () => {
 
 	return (
 		<React.Fragment>
+			<Alert alert={{text: 'Test Alert'}} />
 			<Search />
 			<div className="row">
 				{cards.map((card) => {
 					return (
-						<div key="card" className="col-sm-4 mb-4">
+						<div key={card} className="col-sm-4 mb-4">
 							<Card />
 						</div>
 					);
