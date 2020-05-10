@@ -25,6 +25,7 @@ const GithubState = ({ children }) => {
 		loading: false,
 		repos: [],
 	};
+
 	const [state, dispatch] = useReducer(githubReducer, initialState);
 
 	const search = async (value) => {

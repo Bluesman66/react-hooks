@@ -2,6 +2,7 @@ import React, { Fragment, useContext, useEffect } from 'react';
 
 import { GithubContext } from '../context';
 import { Link } from 'react-router-dom';
+import { Repos } from '../components';
 
 const Profile = ({ match }) => {
 	const urlName = match.params.name;
@@ -53,7 +54,12 @@ const Profile = ({ match }) => {
 									<p>{bio}</p>
 								</Fragment>
 							)}
-							<a href={html_url} target="_blank" rel="noopener noreferrer" className="btn btn-dark">
+							<a
+								href={html_url}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="btn btn-dark"
+							>
 								Open Profile
 							</a>
 							<ul>
@@ -88,7 +94,8 @@ const Profile = ({ match }) => {
 					</div>
 				</div>
 			</div>
-			{repos.join()}
+
+			<Repos repos={repos} />
 		</Fragment>
 	);
 };
