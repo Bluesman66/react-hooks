@@ -43,7 +43,7 @@ const GithubState = ({ children }) => {
 		dispatch({ type: GET_USER, payload: res.data });
 	};
 
-	const getRepor = async (name) => {
+	const getRepos = async (name) => {
 		setLoading();
 		const res = await axios.get(
 			withCreds(`https://api.github.com/users/${name}/repos?per_page=5&`)
@@ -62,7 +62,7 @@ const GithubState = ({ children }) => {
 			value={{
 				search,
 				getUser,
-				getRepor,
+				getRepos,
 				clearUsers,
 				setLoading,
 				user,
